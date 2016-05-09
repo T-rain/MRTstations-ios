@@ -45,8 +45,7 @@ struct MRTdata{
         let list = json.arrayValue
         
         //need the lineDictionary.value(color)
-        for (key,value) in lineDictionary {
-            
+        for (key, _ ) in lineDictionary {
             //first,filter with lineDictionary.key("lineName")
             //then,map Array<JSON>
             let stationArray = list.filter({$0["lines"][key].string != nil }).map({(x) -> MRTStation in
@@ -54,7 +53,7 @@ struct MRTdata{
                 let stationLineDict:[String:JSON] = x["lines"].dictionaryValue
                 
                 for (skey,subjson) in stationLineDict {
-                    let lines = MRTLines(lineName: skey,lineStation: subjson.string!,lineBackgroundColor: value)
+                    let lines = MRTLines(lineName: skey,lineStation: subjson.string!,lineBackgroundColor: lineDictionary[skey]!)
                     array.append(lines)
                 }
                 let mrtstation = MRTStation(stationName:x["name"].string!,line: array )

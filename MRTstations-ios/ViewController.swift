@@ -50,9 +50,20 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         //let sinp = indexPath.section*3+indexPath.row
         //print(sinp)
         cell.StationName.text = mrtData.getData()[indexPath.section][indexPath.row].stationName
+        
+        
         cell.lineOne.text = mrtData.getData()[indexPath.section][indexPath.row].line[0].lineStation
         cell.lineOne.backgroundColor = mrtData.getData()[indexPath.section][indexPath.row].line[0].lineBackgroundColor
-        cell.lineTwo.hidden = true
+        
+        if(mrtData.getData()[indexPath.section][indexPath.row].line.count > 1){
+            cell.lineTwo.text = mrtData.getData()[indexPath.section][indexPath.row].line[1].lineStation
+            cell.lineTwo.backgroundColor = mrtData.getData()[indexPath.section][indexPath.row].line[1].lineBackgroundColor
+        }else{
+            cell.lineTwo.text = ""
+            cell.lineTwo.backgroundColor = UIColor(red: 1.0, green:1.0, blue: 1.0, alpha: 1.0)
+        }
+    
+        
         return cell
     }
     
