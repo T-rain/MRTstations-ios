@@ -33,7 +33,7 @@
                                         <rect key="frame" x="0.0" y="28" width="555" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mDg-cY-YYp" id="jct-M4-6hP">
-                                            <rect key="frame" x="0.0" y="0.0" width="522" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="522" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R9o-Ho-fPZ">
@@ -78,6 +78,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="dsr-JW-kFp"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="kzG-9C-Cv1"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -90,6 +94,9 @@
                             <constraint firstItem="zxN-zt-L3F" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QIp-pk-K8E"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mrtTable" destination="za2-2q-SxN" id="rwm-vC-GXq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
