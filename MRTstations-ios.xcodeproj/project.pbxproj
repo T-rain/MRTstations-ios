@@ -12,6 +12,7 @@
 		3F0D15AA1CDF68310051B151 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F0D15A81CDF68310051B151 /* Main.storyboard */; };
 		3F0D15AC1CDF68310051B151 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F0D15AB1CDF68310051B151 /* Assets.xcassets */; };
 		3F0D15AF1CDF68310051B151 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F0D15AD1CDF68310051B151 /* LaunchScreen.storyboard */; };
+		3FDB6EDD1CE09E13002E0283 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDB6EDC1CE09E13002E0283 /* CustomCell.swift */; };
 		76C57E039520BD779B04D2AB /* Pods_MRTstations_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C0DC9D0CB874393312447CB /* Pods_MRTstations_ios.framework */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +25,7 @@
 		3F0D15AB1CDF68310051B151 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F0D15AE1CDF68310051B151 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F0D15B01CDF68310051B151 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FDB6EDC1CE09E13002E0283 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		5C0DC9D0CB874393312447CB /* Pods_MRTstations_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MRTstations_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A724F671C92C7E78511C95F3 /* Pods-MRTstations-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MRTstations-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MRTstations-ios/Pods-MRTstations-ios.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -67,6 +69,7 @@
 				3F0D15AB1CDF68310051B151 /* Assets.xcassets */,
 				3F0D15AD1CDF68310051B151 /* LaunchScreen.storyboard */,
 				3F0D15B01CDF68310051B151 /* Info.plist */,
+				3FDB6EDC1CE09E13002E0283 /* CustomCell.swift */,
 			);
 			path = "MRTstations-ios";
 			sourceTree = "<group>";
@@ -211,6 +214,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F0D15A71CDF68310051B151 /* ViewController.swift in Sources */,
+				3FDB6EDD1CE09E13002E0283 /* CustomCell.swift in Sources */,
 				3F0D15A51CDF68310051B151 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

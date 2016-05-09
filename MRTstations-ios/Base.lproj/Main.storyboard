@@ -29,7 +29,7 @@
                                 <rect key="frame" x="20" y="49" width="555" height="531"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="mDg-cY-YYp">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="mDg-cY-YYp" customClass="CustomCell" customModule="MRTstations_ios" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="555" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mDg-cY-YYp" id="jct-M4-6hP">
@@ -41,7 +41,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="67" id="zhV-E3-gf0"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -50,7 +50,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="63" id="SI7-4a-3OV"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -59,7 +59,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="142" id="OD0-P1-Fob"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -76,6 +76,11 @@
                                                 <constraint firstItem="RE8-0Y-Eod" firstAttribute="baseline" secondItem="R9o-Ho-fPZ" secondAttribute="baseline" id="wSZ-0t-nsX"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="StationName" destination="RE8-0Y-Eod" id="XQR-UJ-fsi"/>
+                                            <outlet property="lineOne" destination="s8g-Zd-y1V" id="cOW-Sj-x98"/>
+                                            <outlet property="lineTwo" destination="R9o-Ho-fPZ" id="RQV-6U-jIT"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
