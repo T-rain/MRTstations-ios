@@ -46,9 +46,9 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! CustomCell
         
-        print(indexPath)
+        //print(indexPath)
         let sinp = indexPath.section*3+indexPath.row
-        print(sinp)
+        //print(sinp)
         cell.StationName.text = staNames[sinp]
         cell.lineOne.text = "文湖線"
         cell.lineOne.backgroundColor = UIColor(red: 158/255, green:101/255, blue: 46/255, alpha: 1.0)
