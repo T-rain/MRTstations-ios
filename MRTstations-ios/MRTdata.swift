@@ -9,25 +9,25 @@
 import Foundation
 import SwiftyJSON
 
-/*
+
 struct MRTStation{
     
     var stationName:String
-    var line:Array<MRTLine>
+    var line:Array<MRTLines>
 
 }
-*/
 
-
-struct MRTLine{
+struct MRTLines{
     var lineName:String
-    var lineStationCount:Int
+    var lineStation:String
+    var lineBackgroundColor:UIColor
 }
+
 
 struct MRTdata{
     
-    private var dataArray: Array<Array<JSON>> = []
-    private var lineArray: [MRTLine] = []
+    private var dataArray: Array<Array<MRTStation>> = []
+
     private let lineDictionary = ["文湖線":UIColor(red: 158/255, green:101/255, blue: 46/255, alpha: 1.0),
                                   "淡水信義線":UIColor(red: 203/255, green:44/255, blue: 48/255, alpha: 1.0),
                                   "新北投支線":UIColor(red: 248/255, green:144/255, blue: 165/255, alpha: 1.0),
@@ -46,25 +46,30 @@ struct MRTdata{
         let list = json.arrayValue
         
         
-        let lineNameArray = Array(lineDictionary.keys)
-        lineNameArray.forEach({print($0)})
+        for (key,value) in lineDictionary {
+            
+            let stationArray = list.filter({$0["lines"][key].string != nil }).map({(x) -> MRTStation in
+                
+                var array: Array<MRTLines> = []
+                let stationLineDict:[String:JSON] = x["lines"].dictionaryValue
+                
+                for (skey,subjson) in stationLineDict {
+                    let lines = MRTLines(lineName: skey,lineStation: subjson.string!,lineBackgroundColor: value)
+                    array.append(lines)
+                }
+                let mrtstation = MRTStation(stationName:x["name"].string!,line: array )
+                return mrtstation
+            })
+            
+            dataArray.append(stationArray)
+        }
         
-        let brStationArray = list.filter({$0["lines"]["文湖線"].string != nil })
-        let brline = MRTLine(lineName: "文湖線",lineStationCount:  brStationArray.count)
         
-        lineArray.append(brline)
-        print(lineArray[0])
-        dataArray.append(brStationArray)
-        print(dataArray[0][0])
+        //dataArray.forEach({print($0)})
     }
     
-    func getData() -> Array<Array<JSON>>{
+    func getData() -> Array<Array<MRTStation>>{
         return dataArray
-    }
-    
-    
-    func getLine() -> Array<MRTLine>{
-        return lineArray
     }
     
 }
