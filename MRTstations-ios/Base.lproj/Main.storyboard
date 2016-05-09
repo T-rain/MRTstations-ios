@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="YcI-WZ-sgB">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -7,7 +7,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--MRT-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MRTstations_ios" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,21 +19,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MRT Stations" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zxN-zt-L3F">
-                                <rect key="frame" x="249" y="20" width="103" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="za2-2q-SxN">
                                 <rect key="frame" x="20" y="49" width="555" height="531"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="mDg-cY-YYp" customClass="CustomCell" customModule="MRTstations_ios" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="555" height="44"/>
+                                        <rect key="frame" x="0.0" y="92" width="555" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mDg-cY-YYp" id="jct-M4-6hP">
-                                            <rect key="frame" x="0.0" y="0.0" width="522" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="522" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R9o-Ho-fPZ">
@@ -91,19 +85,36 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="za2-2q-SxN" secondAttribute="bottom" constant="20" symbolic="YES" id="B4H-pt-RGR"/>
-                            <constraint firstItem="za2-2q-SxN" firstAttribute="top" secondItem="zxN-zt-L3F" secondAttribute="bottom" constant="8" symbolic="YES" id="FFQ-Ba-eiS"/>
-                            <constraint firstItem="za2-2q-SxN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Faz-FL-tut"/>
-                            <constraint firstItem="zxN-zt-L3F" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="IWF-bh-et5"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="za2-2q-SxN" secondAttribute="trailing" constant="5" id="J1w-Q2-V49"/>
-                            <constraint firstItem="zxN-zt-L3F" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QIp-pk-K8E"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="za2-2q-SxN" secondAttribute="trailing" constant="5" id="7zN-4N-cV7"/>
+                            <constraint firstItem="za2-2q-SxN" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="49" id="GIc-SF-soD"/>
+                            <constraint firstAttribute="bottom" secondItem="za2-2q-SxN" secondAttribute="bottom" constant="20" symbolic="YES" id="QB7-Ra-FkH"/>
+                            <constraint firstItem="za2-2q-SxN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="kzf-QE-iKx"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="MRT" id="fNt-Go-Zis"/>
                     <connections>
                         <outlet property="mrtTable" destination="za2-2q-SxN" id="rwm-vC-GXq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1090" y="272"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="N8F-rL-eDA">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YcI-WZ-sgB" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HQ2-wI-EBd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="MPp-tO-qjK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="THx-FF-Cuo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="278" y="272"/>
         </scene>
