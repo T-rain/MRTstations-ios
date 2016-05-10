@@ -10,6 +10,7 @@ import UIKit
 
 class OneLineViewController: UIViewController {
     
+
     @IBOutlet weak var navigation: UINavigationItem!
     @IBOutlet weak var stationName: UILabel!
     @IBOutlet weak var lineName: UILabel!

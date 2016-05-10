@@ -78,7 +78,7 @@ struct MRTdata{
         })
         */
         
-        dataArray.forEach({print($0)})
+        //dataArray.forEach({print($0)})
     }
     
     func getData() -> Array<Array<MRTStation>>{

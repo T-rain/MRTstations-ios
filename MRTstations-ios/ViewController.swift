@@ -67,6 +67,20 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         return cell
     }
     
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let cellMrtData = getMrtStationWithIndexPath(indexPath)
+        let lineCount = cellMrtData.line.count
+        print(lineCount)
+        switch lineCount {
+        case 1:
+            self.performSegueWithIdentifier("showOneLineDetail", sender: self)
+        case 2:
+            self.performSegueWithIdentifier("showTwoLineDetail", sender: self)
+        default:
+            break
+        }
+    }
+    
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
@@ -74,11 +88,15 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
             switch identifier {
                 case "showOneLineDetail":
                     let oneLineVC = segue.destinationViewController as! OneLineViewController
-                    if let indexPath = self.mrtTable.indexPathForCell(sender as! UITableViewCell){
-                        oneLineVC.mrtStation = getMrtStationWithIndexPath(indexPath)
-                    }
-                
+                    let indexPath = self.mrtTable.indexPathForSelectedRow
+                    oneLineVC.mrtStation = getMrtStationWithIndexPath(indexPath!)
+                case "showTwoLineDetail":
+                    let twoLineVC = segue.destinationViewController as! TwoLineViewController
+                    let indexPath = self.mrtTable.indexPathForSelectedRow
+                    twoLineVC.mrtStation = getMrtStationWithIndexPath(indexPath!)
+ 
                 default: break
+                
             }
         }
         
