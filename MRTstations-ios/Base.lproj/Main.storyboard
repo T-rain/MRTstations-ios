@@ -74,6 +74,7 @@
                                             <outlet property="StationName" destination="RE8-0Y-Eod" id="XQR-UJ-fsi"/>
                                             <outlet property="lineOne" destination="s8g-Zd-y1V" id="cOW-Sj-x98"/>
                                             <outlet property="lineTwo" destination="R9o-Ho-fPZ" id="RQV-6U-jIT"/>
+                                            <segue destination="wLZ-fB-prS" kind="show" identifier="showOneLineDetail" id="3mv-nt-xuE"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -99,6 +100,76 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1090" y="272"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="Yft-64-rJ9">
+            <objects>
+                <viewController id="wLZ-fB-prS" customClass="OneLineViewController" customModule="MRTstations_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wPk-bD-pX1"/>
+                        <viewControllerLayoutGuide type="bottom" id="6xJ-Ps-1a8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SGH-Ql-bh9">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0cK-uQ-A0l">
+                                <rect key="frame" x="0.0" y="72" width="600" height="63"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="600" id="uUL-aA-X6S"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rMG-TX-DMB">
+                                <rect key="frame" x="0.0" y="155" width="600" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="kJ5-Lb-lnR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0cK-uQ-A0l" firstAttribute="top" secondItem="wPk-bD-pX1" secondAttribute="bottom" constant="8" symbolic="YES" id="4BO-gP-5jV"/>
+                            <constraint firstItem="6xJ-Ps-1a8" firstAttribute="top" secondItem="rMG-TX-DMB" secondAttribute="bottom" constant="393" id="eL5-3k-bFc"/>
+                            <constraint firstItem="0cK-uQ-A0l" firstAttribute="centerX" secondItem="rMG-TX-DMB" secondAttribute="centerX" id="f5F-P1-JjG"/>
+                            <constraint firstAttribute="trailing" secondItem="rMG-TX-DMB" secondAttribute="trailing" id="fko-Io-kfO"/>
+                            <constraint firstItem="rMG-TX-DMB" firstAttribute="top" secondItem="0cK-uQ-A0l" secondAttribute="bottom" constant="20" id="hGo-Dm-Z08"/>
+                            <constraint firstItem="rMG-TX-DMB" firstAttribute="leading" secondItem="SGH-Ql-bh9" secondAttribute="leading" id="xmf-X1-qKV"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="lh9-x8-OnP"/>
+                    <connections>
+                        <outlet property="lineName" destination="rMG-TX-DMB" id="ZAw-SW-Zjv"/>
+                        <outlet property="navigation" destination="lh9-x8-OnP" id="1a3-Rr-cCe"/>
+                        <outlet property="stationName" destination="0cK-uQ-A0l" id="rEU-6L-IXb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pvh-33-R4N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1863" y="60"/>
+        </scene>
+        <!--Two Line View Controller-->
+        <scene sceneID="KGs-32-JEu">
+            <objects>
+                <viewController id="oFT-vb-Lrx" customClass="TwoLineViewController" customModule="MRTstations_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2gp-a7-BGS"/>
+                        <viewControllerLayoutGuide type="bottom" id="aKy-OJ-BAC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FVF-X7-4f5">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dmn-Ei-7KK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1874" y="746"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="N8F-rL-eDA">

@@ -68,6 +68,30 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     }
     
 
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if let identifier = segue.identifier {
+            switch identifier {
+                case "showOneLineDetail":
+                    let oneLineVC = segue.destinationViewController as! OneLineViewController
+                    if let indexPath = self.mrtTable.indexPathForCell(sender as! UITableViewCell){
+                        oneLineVC.mrtStation = getMrtStationWithIndexPath(indexPath)
+                    }
+                
+                default: break
+            }
+        }
+        
+        
+    }
+    
+    func getMrtStationWithIndexPath(indexPath: NSIndexPath) -> MRTStation
+    {
+        return mrtData.getData()[indexPath.section][indexPath.row]
+    }
+    
+    
+
 
 }
 
